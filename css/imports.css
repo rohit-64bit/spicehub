@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 #bestProducts{
     font-family: 'Bree Serif', serif;
 }
 
 .bree{
     font-family: 'Bree Serif', serif;
+}
+
+.bg1{
+    background-image: url(/assets/bg/bgproducts.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg2{
+    background-image: url(/assets/bg/bg2.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
 }
