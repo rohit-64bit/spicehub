@@ -1,7 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
+/* * {
+    scrollbar-width: auto;
+    scrollbar-color: #e9a32b #ffffff;
+  }
+
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e9a32b;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  } */
+
 html{
     scroll-behavior: smooth;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+
 }
 
 #bestProducts{
@@ -14,13 +40,88 @@ html{
 
 .bg1{
     background-image: url(/assets/bg/bgproducts.jpg);
-    background-size: 100%;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .bg2{
     background-image: url(/assets/bg/bg2.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
+
+.bg3{
+  background-image: url(/assets/bg/parallax2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.bg4{
+  background-image: url(/assets/bg/parallax-full-width.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgfooter{
+    background-image: url(/assets/bg/footer_1.jpg);
+    /* background-size: 100%; */
+    background-position: center;
+
+}
+
+
+/* drop down menu of account */
+
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  .dropdown-content a:hover {background-color: rgb(255, 245, 63);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+
+footer{
+justify-content: baseline;
+}
+
+
+ /* home page slide show view loader */
+    
+ [data-component="slideshow"] .slide {
+  display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+}
+
+@keyframes vanish {
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
