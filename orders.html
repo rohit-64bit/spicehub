@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/imports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>SKVANILLE - Imports & Exports</title>
+</head>
+<body>
+<!-- header for desktop -->
+<header class="hidden md:flex bg-yellow-900 justify-around h-20">
+    <div class="my-auto mx-9">
+        <img src="/assets/logodesk.png" class="h-14 rounded-full" alt="">
+    </div>
+
+    <div class="my-auto flex text-white">
+        <a href="/index.html" class="mx-5 hover:text-yellow-300 font-medium">Home</a>
+        <a href="/shop.html" class="mx-5 hover:text-yellow-300 font-medium">Shop</a>
+        <a href="/contact.html" class="mx-5 hover:text-yellow-300 font-medium">Contact us</a>
+        <a href="/about.html" class="mx-5 hover:text-yellow-300 font-medium">About</a>
+    </div>
+    <div class="my-auto mx-4 text-white flex">
+        <div id="searchBtn" class="" onclick="showSearch()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 cursor-pointer hover:text-yellow-300" width="16"
+                height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </div>
+        <a href="/cart.html" class="flex hover:text-yellow-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 flex cursor-pointer " width="16" height="16"
+                fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+
+            </svg>
+            <p class=" text-[10px] -mt-1 -ml-1">0</p>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mx-2 cursor-pointer hover:text-yellow-300" width="16"
+                    height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+            </button>
+            <div class="dropdown-content">
+                <a href="/login.html">Profile</a>
+                <a href="/orders.html">Orders</a>
+                <button
+                    class="text-black text-center mx-5 my-3 p-2 w-3/4 font-medium rounded-full bree border-yellow-700 border-2 hover:bg-yellow-400 hover:border-none focus:bg-yellow-400">Sign
+                    Out</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</header>
+
+<!-- header for smaller device -->
+
+<header class="md:hidden bg-yellow-900 justify-around h-10">
+    <div class="flex justify-between " >
+        <div class="flex flex-col gap-1 my-3 ml-3" id="showdrop" onclick="showDrop()">
+            <span class="w-5 border-t-2 border-white "></span>
+            <span class="w-5 border-t-2 border-white "></span>
+            <span class="w-5 border-t-2 border-white "></span>
+        </div>
+        
+        <div class="flex ">
+            <div id="searchBtn" class="my-auto" onclick="showSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer text-white hover:text-yellow-300"
+                    width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </div>
+            <div class="my-auto mx-4 text-white flex">
+                <a href="/cart.html" class="flex hover:text-yellow-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 flex cursor-pointer " width="16" height="16"
+                        fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+
+                    </svg>
+                    <p class=" text-[10px] -mt-1 -ml-1">0</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- only for smaller devices -->
+<div id="options" class="text-white py-5 bg-yellow-900 flex flex-col gap-2 w-[100%] h-max">
+    <a href="/index.html" class="mx-5 hover:text-yellow-300 ">Home</a>
+    <a href="/shop.html" class="mx-5 hover:text-yellow-300 ">Shop</a>
+    <a href="/contact.html" class="mx-5 hover:text-yellow-300 ">Contact us</a>
+    <a href="/about.html" class="mx-5 hover:text-yellow-300 ">Profile</a>
+    <a href="/about.html" class="mx-5 hover:text-yellow-300 ">Orders</a>
+    <a href="/about.html" class="mx-5 hover:text-yellow-300 ">About</a>
+</div>
+
+<div id="searchSection" class="h-max bg-slate-200 flex">
+    <form action="" class="flex w-[100%]">
+        <input type="text" placeholder="Search Our Store" name="" id="searchQuery"
+            class="my-auto w-[98%] h-12 px-4 rounded-full">
+        <button type="submit"
+            class="p-2 my-auto -ml-11 h-[80%] border-2 border-yellow-800 rounded-full hover:border-yellow-400 hover:bg-yellow-400 transition-all ease-in-out duration-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </button>
+    </form>
+    <div onclick="hideSearch()" class="m-auto cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-x-lg  hover:animate-pulse" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+    </div>
+</div>
+
+<main>
+    
+</main>
+
+<footer class="bgfooter h-auto pt-5 md:h-96 md:pt-10 md:px-20">
+    <div class="flex flex-col md:flex-row h-max">
+        <div class="mx-10 md:mx-auto">
+            <p class="text-xl md:text-3xl md:font-bold text-yellow-500 bree">
+                About Us
+            </p>
+            <p class="text-white w-52 my-5">
+                Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus
+                ac, consequat velit.
+            </p>
+
+        </div>
+        <div class="mx-10 md:mx-auto">
+            <p class="text-xl md:text-3xl md:font-bold text-yellow-500 bree">
+                Subscribe to us
+            </p>
+            <form action="" class="flex flex-col mt-5">
+                <input type="email" name="" id="" placeholder="email"
+                    class="w-full my-2 font-medium border-2 border-yellow-500 rounded-full px-4 h-8">
+                <button class="w-full bg-yellow-500 my-2 font-medium rounded-full h-8">Subscribe</button>
+            </form>
+        </div>
+        <div class="mx-10 md:mx-auto">
+            <p class="text-xl md:text-3xl md:font-bold text-yellow-500 bree">
+                Help
+            </p>
+            <div class="my-5 flex flex-col">
+
+                <a href="/contact.html" class="text-white my-1">Help</a>
+                <a href="#searchSection" onclick="showSearch()" class="text-white my-1">Search</a>
+            </div>
+        </div>
+        <div class="mx-10 md:mx-auto">
+            <p class="text-xl md:text-3xl md:font-bold text-yellow-500 bree">
+                Support
+            </p>
+            <div class="my-5 flex flex-col">
+
+                <a href="/contact.html" class="text-white my-1">Contact Us</a>
+                <a href="/about.html" class="text-white my-1">About Us</a>
+
+            </div>
+        </div>
+        <div class="mx-10 md:mx-auto">
+            <p class="text-xl md:text-3xl md:font-bold text-yellow-500 bree">
+                Contact us
+            </p>
+            <div class="my-5 flex flex-col">
+                <div class="text-white flex my-1"><i class="fa-solid fa-house mr-2 mt-1"></i>
+                    <p class="w-[60%]">11244 Niki Lauda 455 New Zealand</p>
+                </div>
+                <div class="text-white flex my-1"><i class="fa-solid fa-phone my-auto mr-2"></i>
+                    <p class=" my-auto mr-2">0000 - 123 - 456789</p>
+                </div>
+                <div class="text-white flex my-1"><i class="fa-solid fa-clock my-auto mr-2"></i>
+                    <p class=" my-auto mr-2">9.30AM - 7.30PM</p>
+                </div>
+                <div class="text-white flex my-1"><i class="fa-solid fa-envelope my-auto mr-2"></i><a href=""
+                        class=" my-auto mr-2">
+                        mail@example.com
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-between px-4">
+        <div class="my-3">
+            <a href="" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <ul class="flex my-3">
+
+            <li class="icon--payment">
+                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                    aria-labelledby="pi-visa">
+                    <title id="pi-visa">Visa</title>
+                    <path opacity=".07"
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                    <path fill="#fff"
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                    <path
+                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                        fill="#142688" />
+                </svg>
+            </li>
+
+            <li class="icon--payment">
+                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                    aria-labelledby="pi-master">
+                    <title id="pi-master">Mastercard</title>
+                    <path opacity=".07"
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                    <path fill="#fff"
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                    <circle fill="#EB001B" cx="15" cy="12" r="7" />
+                    <circle fill="#F79E1B" cx="23" cy="12" r="7" />
+                    <path fill="#FF5F00"
+                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" />
+                </svg>
+            </li>
+
+            <li class="icon--payment">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24"
+                    aria-labelledby="pi-american_express">
+                    <title id="pi-american_express">American Express</title>
+                    <g fill="none">
+                        <path fill="#000"
+                            d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+                            opacity=".07" />
+                        <path fill="#006FCF"
+                            d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1" />
+                        <path fill="#FFF"
+                            d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z" />
+                    </g>
+                </svg>
+
+            </li>
+
+            <li class="icon--payment">
+                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
+                    aria-labelledby="pi-paypal">
+                    <title id="pi-paypal">PayPal</title>
+                    <path opacity=".07"
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                    <path fill="#fff"
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                    <path fill="#003087"
+                        d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z" />
+                    <path fill="#3086C8"
+                        d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z" />
+                    <path fill="#012169"
+                        d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z" />
+                </svg>
+            </li>
+
+            <li class="icon--payment">
+                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                    aria-labelledby="pi-diners_club">
+                    <title id="pi-diners_club">Diners Club</title>
+                    <path opacity=".07"
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                    <path fill="#fff"
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                    <path
+                        d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+                        fill="#3086C8" />
+                </svg>
+            </li>
+
+            <li class="icon--payment">
+                <svg viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title id="pi-discover">Discover</title>
+                    <path fill="#000" opacity=".07"
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                    <path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z"
+                        fill="#fff" />
+                    <path
+                        d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z"
+                        fill="#231F20" />
+                    <path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                        fill="url(#pi-paint0_linear)" />
+                    <path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                        fill="url(#pi-paint1_linear)" />
+                    <path
+                        d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z"
+                        fill="#231F20" />
+                    <path
+                        d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z"
+                        fill="#231F20" />
+                    <path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z"
+                        fill="#F48120" />
+                    <defs>
+                        <linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F89F20" />
+                            <stop offset=".25" stop-color="#F79A20" />
+                            <stop offset=".533" stop-color="#F68D20" />
+                            <stop offset=".62" stop-color="#F58720" />
+                            <stop offset=".723" stop-color="#F48120" />
+                            <stop offset="1" stop-color="#F37521" />
+                        </linearGradient>
+                        <linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F58720" />
+                            <stop offset=".359" stop-color="#E16F27" />
+                            <stop offset=".703" stop-color="#D4602C" />
+                            <stop offset=".982" stop-color="#D05B2E" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </li>
+
+        </ul>
+    </div>
+    <div class="border-t-[1px] md:border-t-2 w-full mx-auto border-white"></div>
+    <div>
+        <div class="text-sm md:text-base text-center text-white font-light py-3">Copyright © 2022 | SKVANILLE IMPORTS AND EXPORTS</div>
+    </div>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
